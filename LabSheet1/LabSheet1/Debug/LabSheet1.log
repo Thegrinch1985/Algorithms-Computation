@@ -1,0 +1,54 @@
+﻿  Book.cpp
+  main.cpp
+c:\users\t450 i5\onedrive - tallaght institute of technology\4th_year_8th_sem\algorithms & computation\labsheet1\labsheet1\main.cpp(44): warning C4018: '<': signed/unsigned mismatch
+c:\users\t450 i5\onedrive - tallaght institute of technology\4th_year_8th_sem\algorithms & computation\labsheet1\labsheet1\main.cpp(75): warning C4018: '<': signed/unsigned mismatch
+c:\users\t450 i5\onedrive - tallaght institute of technology\4th_year_8th_sem\algorithms & computation\labsheet1\labsheet1\main.cpp(82): warning C4018: '<': signed/unsigned mismatch
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xutility(1108): error C2664: 'bool (Product,Product)': cannot convert argument 2 from 'Product *' to 'Product'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xutility(1108): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xutility(1107): note: see reference to function template instantiation 'bool std::_Debug_lt_pred<bool(__cdecl *&)(Product,Product),Product*&,Product*&>(_Pr,_Ty1,_Ty2) noexcept(<expr>)' being compiled
+          with
+          [
+              _Pr=bool (__cdecl *&)(Product,Product),
+              _Ty1=Product *&,
+              _Ty2=Product *&
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(4000): note: see reference to function template instantiation 'std::pair<_RanIt,_RanIt> std::_Partition_by_median_guess_unchecked<_RanIt,bool(__cdecl *)(Product,Product)>(_RanIt,_RanIt,_Pr)' being compiled
+          with
+          [
+              _RanIt=Product **,
+              _Pr=bool (__cdecl *)(Product,Product)
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(4034): note: see reference to function template instantiation 'void std::_Sort_unchecked<Product**,bool(__cdecl *)(Product,Product)>(_RanIt,_RanIt,int,_Pr)' being compiled
+          with
+          [
+              _RanIt=Product **,
+              _Pr=bool (__cdecl *)(Product,Product)
+          ]
+  c:\users\t450 i5\onedrive - tallaght institute of technology\4th_year_8th_sem\algorithms & computation\labsheet1\labsheet1\main.cpp(80): note: see reference to function template instantiation 'void std::sort<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,bool(__cdecl *)(Product,Product)>(const _RanIt,const _RanIt,_Pr)' being compiled
+          with
+          [
+              _Ty=Product *,
+              _RanIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<Product *>>>,
+              _Pr=bool (__cdecl *)(Product,Product)
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xutility(1108): error C2664: 'bool (Product,Product)': cannot convert argument 1 from 'Product *' to 'Product'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xutility(1108): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(3907): error C2664: 'bool (Product,Product)': cannot convert argument 2 from 'Product *' to 'Product'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(3907): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(3907): error C2664: 'bool (Product,Product)': cannot convert argument 1 from 'Product *' to 'Product'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(3907): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(3914): error C2664: 'bool (Product,Product)': cannot convert argument 2 from 'Product *' to 'Product'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(3914): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(3914): error C2664: 'bool (Product,Product)': cannot convert argument 1 from 'Product *' to 'Product'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(3914): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(3929): error C2664: 'bool (Product,Product)': cannot convert argument 2 from 'Product *' to 'Product'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(3929): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(3929): error C2664: 'bool (Product,Product)': cannot convert argument 1 from 'Product *' to 'Product'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(3929): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(3949): error C2664: 'bool (Product,Product)': cannot convert argument 2 from 'Product *' to 'Product'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(3949): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(3949): error C2664: 'bool (Product,Product)': cannot convert argument 1 from 'Product *' to 'Product'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\algorithm(3949): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+  Product.cpp
+  Software.cpp
+  Generating Code...
