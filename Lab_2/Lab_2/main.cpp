@@ -81,18 +81,18 @@ void multiples(WhatKind1 sum, WhatKind1 x, int n) {
 	WhatKind1 output = 0;
 	for (int i = sum; i < n; i++) {
 		output += x * n;
-		cout << " output in for loop is : "<<output << endl;
+		cout << " output in for loop is : " << output << endl;
 	}
 
 	sum = sum + output;
-	std::cout << "sum = "  << sum<< std::endl;
+	std::cout << "sum = " << sum << std::endl;
 }
 //template<class TypeParameter>
 template<class T1, class T2>
 T1 init(T1 num1, T1 num2, T2& start) {
 	start = 1;
 	T1 output = num1 + num2;
-	cout << "Output " << output << "And start is "<< start << endl;
+	cout << "Output " << output << "And start is " << start << endl;
 
 	return output;
 }
@@ -109,7 +109,7 @@ int partition(int arr[], int low, int high)
 		if (arr[j] <= pivot)
 		{
 			i++;    // increment index of smaller element 
-			//swap(&arr[i], &arr[j]);
+		//swap(&arr[i], &arr[j]);
 		}
 	}
 	//swap(&arr[i + 1], &arr[high]);
@@ -138,6 +138,36 @@ void quickSort(int arr[], int low, int high)
 		quickSort(arr, low, pi - 1);
 		quickSort(arr, pi + 1, high);
 	}
+}
+template<class T>
+void quicksort(T* arr[], int low, int high) {
+	if (low < high)
+	{
+		int pi = partition_1(arr, low, high);
+		quicksort(arr, low, pi - 1);
+		quicksort(arr, pi + 1, high);
+
+	
+	}
+}
+template<typename T>
+T* partition_1(T array, int start, int end)
+{
+	T* value = 0;
+	int pivot = array[end];
+	int i = (start - 1);
+	for (int j = start; j <= end  ; j++) {
+	
+		
+		if (array[j] <= pivot)
+		{
+			i++;
+			swapValues4(array[i], array[j]);
+		}
+		swapValues4(&array[i + 1], &array[end]);
+	}
+	value = i + 1;
+	return value;
 }
 //Pass by reference(C++ only) Pass - by - reference means to pass the reference 
 //of an argument in the calling function to the corresponding formal parameter of 
@@ -190,7 +220,7 @@ int main() {
 
 
 	multiples(sum, x, n);
-	*/
+	
 	//Question 3
 	int a, b;
 	double start;
@@ -220,13 +250,13 @@ int main() {
 	int pop = 3;
 	double bill = 2.2;
 	init(opo, pop, bill);
-
-	//Question  4 
+	*/
+	//Question  4
 	int array123[] = { 123, 906,86,45,34,54,1,2,23,34,32,34,345,65,456,676,78 };
 	int start = 1;
-	int end = 2;
+	int end = 17;
 	//quicksort(array123, start, end);
-	
+	quicksort(array123, start, end);
 	system("pause");
 
 
