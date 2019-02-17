@@ -9,8 +9,8 @@ int merge(int arraySortedInTwoHalves[], int start, int length) {
 	int i, j, k;
 	int a = (length / 2 ) + 1;
 	const int  medium = a;
-	//int* point = new int;
-	//point = new int[medium];
+	int* point = new int;
+	point = new int[medium];
 
 	for(int i = 0; i < (length/2);i++){
 		int temp_one[i] = arraySortedInTwoHalves[length + i];

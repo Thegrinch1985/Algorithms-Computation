@@ -1,0 +1,11 @@
+﻿  main.cpp
+c:\users\t450 i5\onedrive - tallaght institute of technology\4th_year_8th_sem\algorithms & computation\algorithms-computation\lab_!_repeat\lab_!_repeat\main.cpp(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\t450 i5\onedrive - tallaght institute of technology\4th_year_8th_sem\algorithms & computation\algorithms-computation\lab_!_repeat\lab_!_repeat\main.cpp(33): warning C4018: '<': signed/unsigned mismatch
+c:\users\t450 i5\onedrive - tallaght institute of technology\4th_year_8th_sem\algorithms & computation\algorithms-computation\lab_!_repeat\lab_!_repeat\main.cpp(56): warning C4018: '<': signed/unsigned mismatch
+c:\users\t450 i5\onedrive - tallaght institute of technology\4th_year_8th_sem\algorithms & computation\algorithms-computation\lab_!_repeat\lab_!_repeat\main.cpp(62): warning C4018: '<': signed/unsigned mismatch
+c:\users\t450 i5\onedrive - tallaght institute of technology\4th_year_8th_sem\algorithms & computation\algorithms-computation\lab_!_repeat\lab_!_repeat\main.cpp(68): warning C4018: '<': signed/unsigned mismatch
+c:\users\t450 i5\onedrive - tallaght institute of technology\4th_year_8th_sem\algorithms & computation\algorithms-computation\lab_!_repeat\lab_!_repeat\main.cpp(26): warning C4101: 'Y': unreferenced local variable
+c:\users\t450 i5\onedrive - tallaght institute of technology\4th_year_8th_sem\algorithms & computation\algorithms-computation\lab_!_repeat\lab_!_repeat\main.cpp(26): warning C4101: 'y': unreferenced local variable
+c:\users\t450 i5\onedrive - tallaght institute of technology\4th_year_8th_sem\algorithms & computation\algorithms-computation\lab_!_repeat\lab_!_repeat\main.cpp(26): warning C4101: 'N': unreferenced local variable
+c:\users\t450 i5\onedrive - tallaght institute of technology\4th_year_8th_sem\algorithms & computation\algorithms-computation\lab_!_repeat\lab_!_repeat\main.cpp(26): warning C4101: 'n': unreferenced local variable
+  Lab_!_Repeat.vcxproj -> C:\Users\T450 i5\OneDrive - Tallaght Institute of Technology\4th_year_8th_sem\Algorithms & Computation\Algorithms-Computation\Lab_!_Repeat\Debug\Lab_!_Repeat.exe

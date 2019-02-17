@@ -67,7 +67,17 @@ void swapNum3(T *x, int *y) {
 	cout << x << ' ' << y << endl;
 }
 template<class T>
-void swapValues4(T& x, T& y)
+void swapValues4(T* x, T* y)
+{
+	T temp;
+	temp = *x;
+	x = y;
+	y = temp;
+
+	cout << x << y << endl;
+}
+template<class T>
+void swapValues5(T x, T y)
 {
 	T temp;
 	temp = x;
@@ -110,9 +120,11 @@ int partition(int arr[], int low, int high)
 		{
 			i++;    // increment index of smaller element 
 		//swap(&arr[i], &arr[j]);
+			swapValues5(&arr[i], &arr[j]);
 		}
 	}
 	//swap(&arr[i + 1], &arr[high]);
+	swapValues5(&arr[i+1], &arr[high]);
 	return (i + 1);
 }
 void swap(int* a, int* b)
@@ -139,8 +151,8 @@ void quickSort(int arr[], int low, int high)
 		quickSort(arr, pi + 1, high);
 	}
 }
-template<class T>
-void quicksort(T* arr[], int low, int high) {
+/*template<class T>
+void quicksort(int arr[], int low, int high) {
 	if (low < high)
 	{
 		int pi = partition_1(arr, low, high);
@@ -149,11 +161,11 @@ void quicksort(T* arr[], int low, int high) {
 
 	
 	}
-}
-template<typename T>
-T* partition_1(T array, int start, int end)
+}*/
+/*template<typename T>
+int partition_1(int array, int start, int end)
 {
-	T* value = 0;
+	int value = 0;
 	int pivot = array[end];
 	int i = (start - 1);
 	for (int j = start; j <= end  ; j++) {
@@ -176,7 +188,7 @@ T* partition_1(T array, int start, int end)
 
 //Pass by address is a pointer 
 
-
+*/
 int main() {
 
 	//Question  1 
@@ -254,9 +266,9 @@ int main() {
 	//Question  4
 	int array123[] = { 123, 906,86,45,34,54,1,2,23,34,32,34,345,65,456,676,78 };
 	int start = 1;
-	int end = 17;
+	int end = 10;
+	quickSort(array123, start, end);
 	//quicksort(array123, start, end);
-	quicksort(array123, start, end);
 	system("pause");
 
 
