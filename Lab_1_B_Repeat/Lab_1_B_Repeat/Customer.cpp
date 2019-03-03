@@ -11,7 +11,7 @@ Customer::Customer(string s, string m)
 
 void Customer::printname()
 {
-	cout << "Name : " << name << "Message : " << getMessage();
+	cout << "Name : " << name << "Message : " << getMessage() << endl;
 }
 
 string Customer::getMessage()

@@ -9,15 +9,15 @@
 #include <list>
 #include <functional>
 using namespace std;
-bool compare(Product lhs, Product rhs) 
+
+
+bool sortingMechanism(Product *i, Product *j)
 {
-	return lhs.getGrossPrice() > rhs.getGrossPrice();
+	return  i->getGrossPrice() < j->getGrossPrice();
 }
-
-
 int main()
 {
-	const int INT_SIZE = 8;
+	const int INT_SIZE = 4;
 
 	vector<Product *>array_of_products(8);
 	vector<Product>::iterator vit;
@@ -77,12 +77,11 @@ int main()
 		cout << " Product Number " << (i + 1) << ": € " << array_of_products[i]->getGrossPrice() << endl;
 	}
 	cout << "\nSorted Price List" << endl;
-	sort(array_of_products.begin(), array_of_products.end(),compare);
-
+	//sort(array_of_products.begin(), array_of_products.end(),sortingMechanism);
+	sort(begin(array_of_products), end(array_of_products), sortingMechanism);
 	for (int i = 0; i < array_of_products.size(); i++)
 	{
-		//sort(array_of_products[i]->getGrossPrice().begin(), array_of_products[i]->getGrossPrice().end());
-		//sort(array_of_products.begin(), array_of_products.end());
+		
 		cout << " Product Number " << (i + 1) << ": € " << array_of_products[i]->getGrossPrice() << endl;
 
 	}

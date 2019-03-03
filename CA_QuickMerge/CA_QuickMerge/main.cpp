@@ -1,118 +1,119 @@
-/* C implementation QuickSort */
-#include<stdio.h> 
 #include <iostream>
-#include<string>
-
 using namespace std;
-// A utility function to swap two elements 
-void swap(int* a, int* b)
-{
-	int t = *a;
+
+
+
+template<class T>
+void swap(T *a, T *b) {
+
+	T temp;
+	temp = *a;
 	*a = *b;
-	*b = t;
+	*b = temp;
 }
 
-/* This function takes last element as pivot, places
-   the pivot element at its correct position in sorted
-	array, and places all smaller (smaller than pivot)
-   to left of pivot and all greater elements to right
-   of pivot */
-int partition(int arr[], int low, int high)
-{
-	int pivot = arr[high];    // pivot 
-	int i = (low - 1);  // Index of smaller element 
+template<class T>
+T partition(T arr[], int low, int high) {
+	T pivot = arr[high];
+	int i = low - 1;
 
-	for (int j = low; j <= high - 1; j++)
-	{
-		//cout << "Array J " << arr[j] << endl;
-		//cout << "Array i " << arr[i] << endl;
-		// If current element is smaller than or 
-		// equal to pivot 
+	for (int j = low; j <= high - 1; j++) {
+
 		if (arr[j] <= pivot)
 		{
-			i++;    // increment index of smaller element 
+			i++;
 			swap(&arr[i], &arr[j]);
 		}
 	}
 	swap(&arr[i + 1], &arr[high]);
-	return (i + 1);
+	return i + 1;
+
 }
 
-/* The main function that implements QuickSort
- arr[] --> Array to be sorted,
-  low  --> Starting index,
-  high  --> Ending index */
-void quickSort(int arr[], int low, int high)
-{
+template<class T>
+void quicksort(T arr[], int low, int high) {
+
 	if (low < high)
 	{
-		/* pi is partitioning index, arr[p] is now
-		   at right place */
-		int pi = partition(arr, low, high);
+		T pi = partition(arr, low, high);
 
-		// Separately sort elements before 
-		// partition and after partition 
-		quickSort(arr, low, pi - 1);
-		quickSort(arr, pi + 1, high);
+
+		quicksort(arr, low, pi - 1);
+		quicksort(arr, pi + 1, high);
+
 	}
 }
-/* Function to print an array */
-void printArray(int arr[], int size)
-{
-	int i;
-	for (i = 0; i < size; i++)
-		printf("%d ", arr[i]);
-	printf("n");
-}
-void merge(int A[], int low, int high, int mid)
-{
-	int i, j, k, c[50];
-	i = low;
-	k = low;
-	j = mid + 1;
-	while (i <= mid && j <= high)
+//template<class T>
+void merge(int arr[], int low, int high) {
+	int size = (high - low ) + 1;
+	int *b = new int[size]();
+	int k = 0;
+	
+	int i = low;
+	int medium = ( low + high )/ 2;
+	int j = medium + 1;
+
+	while (k < size)
 	{
-		if (A[i] < A[j])
+		if ((i <= medium) && (arr[i] < arr[j]))
 		{
-			c[k] = A[i];
-			k++;
-			i++;
+			b[k++] = arr[i++];
 		}
 		else
 		{
-			c[k] = A[j];
-			k++;
-			j++;
+			b[k++] = arr[j++];
 		}
+
 	}
-	while (i <= mid)
-	{
-		c[k] = A[i];
-		k++;
-		i++;
+	for (k = 0; k < size; k++) {
+		arr[low + k] = b[k];
 	}
-	while (j <= high)
+	delete[]b;
+}
+//template<class T>
+void mergesort(int arr[], int low, int high) {
+
+	int medium;
+
+	if (low >= high) 
 	{
-		c[k] = A[j];
-		k++;
-		j++;
+		return;
 	}
-	for (i = low; i < k; i++)
+	
+	
+		medium = (low + high) / 2;
+		mergesort(arr, low, medium);
+		mergesort(arr, medium + 1, high);
+		merge(arr, low, high);
+	
+
+
+}
+template<class T>
+void print(T arr[], int size) {
+
+	for (int  i = 0; i < size; i++)
 	{
-		A[i] = c[i];
+		cout << arr[i] << " ";
 	}
 }
+int main() {
 
-// Driver program to test above functions 
-int main()
-{
-	int arr[] = { 10, 7, 8, 9, 1, 5 ,120, 240};
+	int arr []= { 23,56,56,7,8,67,564,2,12,23 };
+	int size = 10;
 	int n = sizeof(arr) / sizeof(arr[0]);
-	quickSort(arr, 0, n - 1);
-	//merge(arr, 0, n-1, (n/2));
-	printf("Sorted array: n");
-	printArray(arr, n);
-	//return 0;
-
+	//int const arraySize = 10;
+	//int array1[arraySize] = { 2,4,3,5,7,2,6,3,6,10 };
+	//mergesort(array1, 0, arraySize - 1);
+	//quicksort(arr, 0, n-1);
+	//print(arr, n);
+	
+	//int arr1[] = { 23,56,56,7,8,67,564,2,12,23,78,9,8,9,8,7,6,5,4,2424,24,2,23 };
+	//int n1 = sizeof(arr1) / sizeof(arr1[0]);
+	print(arr, n - 1);
+	cout << "Pre-Merge" << endl;
+	//int n1 = sizeof(arr1) / sizeof(arr1[0]);
+	mergesort(arr, 0, n-1);
+	print(arr, n-1);
 	system("pause");
 }

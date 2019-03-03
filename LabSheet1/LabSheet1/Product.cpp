@@ -34,15 +34,7 @@ bool Product::compare(Product lhs, Product rhs)
 }
 
 
-bool Product::operator>(Product * lhs)
-{
-	bool result = false;
-	if (this->getGrossPrice() > lhs.getGrossPrice())
-	{
-		result = true;
-	}
-	return result;
-}
+
 
 
 

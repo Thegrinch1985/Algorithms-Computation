@@ -21,7 +21,13 @@ void Person::printname()
 
 bool Person::operator<(const Person & second) const
 {
-	return (name) < second.name;
+	if (second.name.compare(name) < 0) {
+		return false;
+	}
+	else {
+		return true;
+	}
+	//return (name) < second.name;
 }
 
 bool Person::sortByName(Person & p, Person & p2)
